@@ -10,10 +10,15 @@
 ####################################################
 
 set -x # debug mode
-  
+
+set -e # script error
+
+set -o # pope fail error
+
 df -h
 
 free -g
 
 nproc
 
+ps -ef | grep "amazon" | awk '{print $2}'
